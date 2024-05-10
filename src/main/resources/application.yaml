@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: users
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+      database: users_db
+logging:
+  level:
+    root: info
+  pattern:
+    console: "%d{yyyy-MM-dd} | %d{HH:mm:ss.SSS} | %-20.20thread | %highlight(%-5level) | %magenta(%-25.25logger{25}) | %12(ID: %8mdc{CorrelationId}) | %m%n"
